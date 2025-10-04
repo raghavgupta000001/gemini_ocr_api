@@ -27,4 +27,4 @@ COPY . .
 EXPOSE 8000
 
 # Start uvicorn; allow PORT env variable provided by Render
-CMD ["sh", "-lc", "uvicorn ocr-gemini-api:app --host 0.0.0.0 --port ${PORT:-8000} --workers 1"]
+CMD ["sh", "-lc", "uvicorn main:app --host 0.0.0.0 --port ${PORT:-8000} --workers 1"]
